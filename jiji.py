@@ -18,7 +18,7 @@ desired_caps['resetKeyboard'] = True
 driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
 
 
-# 获取放大镜 有content-dsc没有text，通过name获取attr
+# 获取放大镜 有content-dsc没有text，通过name获取attr    获取属性就按照这个name来获取名字的属性
 search_button = driver.find_element_by_id("com.android.settings:id/search")
 print(search_button.get_attribute("name"))
 
@@ -32,10 +32,10 @@ print(search_button.get_attribute("text"))
 # 设置title 有text没有content-dsc，通过text获取attr
 print(setting_title.get_attribute("text"))
 
-# 有class通过 className 获取
+# 有class通过 className 获取     获取class就用这个获取
 print(search_button.get_attribute("className"))
 
-# 有resource-id通过 resourceId 获取
+# 有resource-id通过 resourceId 获取            获取id属性就用这个获取
 print(search_button.get_attribute("resourceId"))
 
 
